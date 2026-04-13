@@ -22,5 +22,12 @@ pipeline{
                 '''
             }
         }
+        stage('poll-scm-checkin'){
+            steps{
+                sh '''
+                   echo "Checking wheather poll scm works or not"
+                '''
+            }
+        }
     }
 }
