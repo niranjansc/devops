@@ -12,7 +12,9 @@ pipeline{
         stage('Build'){
             steps{
                 sh '''
-                   printenv 
+                   printenv
+                   pwd
+                   cd code/ 
                    docker build -t ${IMAGE_NAME}.
                 '''
             }
