@@ -39,7 +39,7 @@ pipeline{
             stage('pushing to Registry'){
                 steps{
                     sh '''
-                         docker push ${IMAGE_NAME}
+                         docker push ${IMAGE_NAME} 
                     '''
                 }
             }
