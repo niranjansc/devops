@@ -38,9 +38,9 @@ pipeline{
 
             stage('pushing to Registry'){
                 steps{
-                    sh '''
+                    sh """
                          docker push ${IMAGE_NAME} 
-                    '''
+                    """
                 }
             }
     }
