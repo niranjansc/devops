@@ -15,7 +15,15 @@ pipeline{
                    printenv
                    pwd
                    cd code/ 
-                   docker build -t ${IMAGE_NAME} .
+                   docker build -t ${IMAGE_NAME}.
+                '''
+            }
+        }
+
+        stage('testing the image'){
+            steps{
+                sh'''
+                     docker run -it -d --name c1 -p 9001:8501 ${IMAGE_NAME}
                 '''
             }
         }
